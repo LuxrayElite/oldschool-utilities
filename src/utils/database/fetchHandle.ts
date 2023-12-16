@@ -2,7 +2,7 @@ import { prisma } from "./initHandle";
 
 export async function fetchUser(userId: string) {
 	const user = await prisma.user.findUnique({ where: { id: userId } });
-	const found = user !== undefined;
+	const found = user !== null;
 	return found;
 }
 
