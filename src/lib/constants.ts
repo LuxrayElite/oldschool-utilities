@@ -1,0 +1,61 @@
+export const raidTypes = [
+	{
+		name: "**Challenge mode** Chambers of Xeric",
+		type: "CM cox",
+	},
+	{
+		name: "Chambers of Xeric",
+		type: "Cox",
+	},
+	{
+		name: "**Hard mode** Theatre of Blood",
+		type: "HM Tob",
+	},
+	{
+		name: "Theatre of Blood",
+		type: "Tob",
+	},
+	{
+		name: "Nex mass!",
+		type: "Nex",
+	},
+	{
+		name: "Tombs of Amascut",
+		type: "ToA",
+	},
+];
+
+export const Emoji = {
+	minion: `<:GIM:971330357498642474>`,
+	birdhouse: `<:birdhouse:973890796786950155>`,
+	daily: `<:daily:974022840074518528>`,
+	hespori: `<:Hespori:976931312776646728>`,
+	hardwood: `<:Hardwood:976931312604704828>`,
+	tears: `<:tog:974023958867357748>`,
+	clue: `<:cs:1140622160977731594>`,
+	agility: `<:agility:1145799770707873852>`,
+	attack: `<:attack:1145799766144467105>`,
+	cooking: `<:cooking:1145798886322086030>`,
+	construction: `<:construction:1145798884740825099>`,
+	crafting: `<:crafting:1145798894358384832>`,
+	defence: `<:defence:1145798898607202375>`,
+	farming: `<:farming:1145798881414754385>`,
+	firemaking: `<:firemaking:1145799774805708892>`,
+	fishing: `<:fishing:1145798874338959371>`,
+	fletching: `<:fletching:1145798902293995521>`,
+	herblore: `<:herblore:973891503850147840>`,
+	hitpoints: `<:hitpoints:1145799762633838644>`,
+	hunter: `<:hunter:1145798882920497202>`,
+	magic: `<:magic:1145798887664255066>`,
+	mining: `<:mining:1145799758296924300>`,
+	prayer: `<:prayer:1145798889488789615>`,
+	ranged: `<:ranged:1145798891577540668>`,
+	runecraft: `<:runecraft:1145799761157423184>`,
+	slayer: `<:slayer:1145798880068386866>`,
+	smithing: `<:smithing:1145799767792816258>`,
+	strength: `<:strength:1145799764437385292>`,
+	thieving: `<:thieving:1145798877971234936>`,
+	woodcutting: `<:woodcutting:1145798904995135598>`,
+	infernal: `<:infernalCape:1145798865870671893>`,
+	max: `<:maxCape:1145798871637839973>`,
+};

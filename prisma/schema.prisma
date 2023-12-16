@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+    id String @id @map("_id")
+    minion String
+    startTime Int?
+    endTime Int?
+    timers Timers?
+    clues Json @default("{\"beginner\": 0,\"easy\": 0,\"medium\": 0,\"hard\": 0,\"elite\": 0,\"master\": 0,\"grandmaster\": 0}")
+    slayerTask String @default("No assignment")
+    slayerAmount Int @default(0)
+}
+
+model Timers{
+id String @id @map("_id") @default(auto()) @db.ObjectId
+author User @relation(fields:[authorId], references: [id])
+authorId String @unique
+birdHarvest Int? @default(0)
+herbHarvest Int? @default(0)
+togReady Int? @default(0)
+dailyReady Int? @default(0)
+hesporiHarvest Int? @default(0)
+hardwoodHarvest Int? @default(0)
+allotmentHarvest Int? @default(0)
+flowerHarvest Int? @default(0)
+hopsHarvest Int? @default(0)
+bushHarvest Int? @default(0)
+treeHarvest Int? @default(0)
+fruitHarvest Int? @default(0)
+seaweedHarvest Int? @default(0)
+vineHarvest Int? @default(0)
+mushroomHarvest Int? @default(0)
+belladonnaHarvest Int? @default(0)
+calquatHarvest Int? @default(0)
+crystalHarvest Int? @default(0)
+spiritHarvest Int? @default(0)
+celastrusHarvest Int? @default(0)
+redwoodHarvest Int? @default(0)
+cactusHarvest Int? @default(0)
+}
+
+model raids{
+  id String @id @map("_id") @default(auto()) @db.ObjectId
+  host String @unique
+  startTime Int?
+  endTime Int?
+  channel String
+  type String?
+}

@@ -1,0 +1,43 @@
+{
+  "name": "oldschool_utilities",
+  "version": "1.0.0",
+  "description": "A discord utility bot for oldschoolbot",
+  "author": "LuxrayElite <12814878+LuxrayElite@users.noreply.github.com>",
+  "license": "GPL-3.0-or-later",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn clean && tsc -p .",
+    "start": "node dist/index.js",
+    "dev": "nodemon -w ./src -w ./.env ./src/index.ts",
+    "lint": "eslint \"**/*.{ts,tsx}\"",
+    "pretty": "yarn prettier -w ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuxrayElite/oldschool-utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuxrayElite/oldschool-utilities/issues"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "chalk": "4",
+    "dayjs": "^1.11.10",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "prettier": "^3.1.1",
+    "prisma": "^5.7.0",
+    "require-all": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/require-all": "^3.0.6",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
