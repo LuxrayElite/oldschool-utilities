@@ -35,13 +35,14 @@ To run the bot, you need the following things first: Git, [NodeJS v18+](https://
 
 1. Clone the repository: `git clone https://github.com/LuxrayElite/oldschool-utilities.git`
 2. Change into the new directory: `cd oldschool-utilities`
-3. Install the yarn dependency: `npm install --global yarn`
-4. Make a .env file copy from the example `cp .env.example .env`
+3. If utilising postgres change to the postgres branch using `git checkout postgres`
+4. Install the yarn dependency: `npm install --global yarn`
+5. Make a .env file copy from the example `cp .env.example .env`
 7. Update this new `.env` file:
    1. Input your bot token you retrieved earlier into `TOKEN`
    2. Change the prefix to whatever you wish with PREFIX
-   3. Input your username, password, and schema names into `DATABASE_URL` using the format `postgresql://USER:PASSWORD@HOST:PORT/DATABASE`
-   4. If using mongoDB utilise the format `mongodb+srv://USER:PASSWORD@CLUSTERNAME.NODE.mongodb.net/PROJECTNAME` when clicking on the connect button on mongodb atlas it will give you a similarly formated url, you just have to add the project name
+   4. Input your username, password, and schema names into `DATABASE_URL` using the format `postgresql://USER:PASSWORD@HOST:PORT/DATABASE`
+   5. If using mongoDB utilise the format `mongodb+srv://USER:PASSWORD@CLUSTERNAME.NODE.mongodb.net/PROJECTNAME` when clicking on the connect button on mongodb atlas it will give you a similarly formated url, you just have to add the project name
 8. Run `yarn` then `yarn install`
 9. Run `npx prisma generate` to generate the Prisma client files.
 10. Run `npx prisma db push` to create the tables on the database referenced in .env
